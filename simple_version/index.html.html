@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Marks Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Student Marks Management System</h1>
+    <p class="subtitle">Subjects: DSA &nbsp;|&nbsp; Python &nbsp;|&nbsp; FOE &nbsp;|&nbsp; CLA</p>
+  </header>
+
+  <main>
+
+    <!-- Add Student Form -->
+    <section class="card">
+      <h2 id="form-title">Add Student</h2>
+      <form id="student-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="e.g. Rahul Sharma" />
+          </div>
+          <div class="form-group">
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" placeholder="e.g. 2K25CSUN01550" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="DSA">DSA</label>
+            <input type="number" id="DSA" placeholder="0–100" min="0" max="100" />
+          </div>
+          <div class="form-group">
+            <label for="Python">Python</label>
+            <input type="number" id="Python" placeholder="0–100" min="0" max="100" />
+          </div>
+          <div class="form-group">
+            <label for="FOE">FOE</label>
+            <input type="number" id="FOE" placeholder="0–100" min="0" max="100" />
+          </div>
+          <div class="form-group">
+            <label for="CLA">CLA</label>
+            <input type="number" id="CLA" placeholder="0–100" min="0" max="100" />
+          </div>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden"></div>
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Add Student</button>
+          <button type="button" id="cancel-btn" class="btn-cancel hidden" onclick="cancelEdit()">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Topper & Average -->
+    <div class="stats-row">
+      <div class="card stat-card">
+        <h2>Class Topper</h2>
+        <div id="topper-box">Loading...</div>
+      </div>
+      <div class="card stat-card">
+        <h2>Class Average</h2>
+        <div id="average-box">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Students Table -->
+    <section class="card">
+      <h2>All Students</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Roll Number</th>
+              <th>Name</th>
+              <th>DSA</th>
+              <th>Python</th>
+              <th>FOE</th>
+              <th>CLA</th>
+              <th>Total</th>
+              <th>%</th>
+              <th>Grade</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr><td colspan="10" class="empty">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

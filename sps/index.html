@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-G Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cosmic Background Layers -->
+    <div class="parallax-bg layer-1"></div>
+    <div class="parallax-bg layer-2"></div>
+    <div class="parallax-bg layer-3"></div>
+    
+    <!-- Light Streaks -->
+    <div class="layer-4"></div>
+    <div class="layer-4 streak-2"></div>
+    <div class="layer-4 streak-3"></div>
+
+    <div class="game-container">
+        <header class="header">
+            <h1 class="glow-text">ZERO-G <span class="neon-magenta">COMBAT</span></h1>
+            <div class="score-board glass-panel">
+                <div class="score">
+                    <span class="label">PLAYER</span>
+                    <span class="points" id="player-score">0</span>
+                </div>
+                <div class="divider"></div>
+                <div class="score">
+                    <span class="label">SYSTEM</span>
+                    <span class="points" id="bot-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="arena">
+            <div class="status-display glass-panel" id="status-text">AWAITING INPUT...</div>
+
+            <div class="battle-zone">
+                <div class="fighter float-anim" id="player-fighter">
+                    <div class="placeholder"><i class="fa-solid fa-user-astronaut"></i></div>
+                </div>
+                <div class="vs-text">VS</div>
+                <div class="fighter float-anim-delayed" id="bot-fighter">
+                    <div class="placeholder"><i class="fa-solid fa-robot"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-wrapper">
+            <div class="controls">
+                <button class="choice-btn rock glass-panel float-slow" data-choice="rock">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                    <span>ROCK</span>
+                </button>
+                <button class="choice-btn paper glass-panel float-medium" data-choice="paper">
+                    <i class="fa-solid fa-hand"></i>
+                    <span>PAPER</span>
+                </button>
+                <button class="choice-btn scissors glass-panel float-fast" data-choice="scissors">
+                    <i class="fa-solid fa-hand-scissors"></i>
+                    <span>SCISSORS</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

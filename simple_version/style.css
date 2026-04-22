@@ -1,0 +1,283 @@
+/* ===== Base Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef2f7;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.7rem;
+}
+
+header .subtitle {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 0.3rem;
+}
+
+/* ===== Main ===== */
+main {
+  max-width: 1050px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===== Card ===== */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4a90d9;
+}
+
+/* ===== Note ===== */
+.note {
+  font-size: 0.82rem;
+  color: #777;
+  background: #f9f9f9;
+  border-left: 3px solid #4a90d9;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.note code {
+  background: #eee;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+/* ===== Form ===== */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 130px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+.form-group input {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 3px rgba(74,144,217,0.15);
+}
+
+.form-group input.invalid {
+  border-color: #e74c3c;
+}
+
+/* ===== Button ===== */
+button[type="submit"] {
+  background: #4a90d9;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #357abd;
+}
+
+/* ===== Error ===== */
+.error-msg {
+  background: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.75rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== Stats Row ===== */
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.stat-card p {
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+.stat-card .big {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* ===== Grade Badges ===== */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.badge-A    { background: #d4edda; color: #155724; }
+.badge-B    { background: #cce5ff; color: #004085; }
+.badge-C    { background: #fff3cd; color: #856404; }
+.badge-Fail { background: #f8d7da; color: #721c24; }
+
+/* ===== Table ===== */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+thead tr {
+  background: #1a1a2e;
+  color: white;
+}
+
+thead th {
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f0f6ff;
+}
+
+tbody td {
+  padding: 0.6rem 0.85rem;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  padding: 2rem;
+}
+
+/* ===== Form actions row ===== */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* ===== Cancel button ===== */
+.btn-cancel {
+  background: transparent;
+  color: #888;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* ===== Edit / Delete row buttons ===== */
+.btn-edit, .btn-delete {
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-edit {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.btn-edit:hover {
+  background: #99caff;
+}
+
+.btn-delete {
+  background: #f8d7da;
+  color: #721c24;
+  margin-left: 0.3rem;
+}
+
+.btn-delete:hover {
+  background: #f1aeb5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 650px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+}
